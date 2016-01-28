@@ -21,8 +21,8 @@ module.exports = function (grunt) {
     copy: {
       main: {
         files: [
-          {src: ['lib/index.html'], dest: 'build/index.html'},
-          {expand: true, flatten: true, src: ['lib/client/app/**/*.html'], dest: 'build/views/', filter: 'isFile'},
+          {src: ['lib/client/index.html'], dest: 'build/index.html'},
+          {expand: true, flatten: true, src: ['lib/client/app/**/*.html'], dest: 'build/templates/', filter: 'isFile'},
         ]
       }
     },
