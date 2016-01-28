@@ -14,7 +14,7 @@ module.exports = function (grunt) {
     browserify: {
       dist: {
         files: {
-          'build/js/bundle.js': ['lib/app/app.js']
+          'build/js/bundle.js': ['lib/client/app/app.js']
         }
       }
     },
@@ -22,7 +22,7 @@ module.exports = function (grunt) {
       main: {
         files: [
           {src: ['lib/index.html'], dest: 'build/index.html'},
-          {expand: true, flatten: true, src: ['lib/app/**/*.html'], dest: 'build/views/', filter: 'isFile'},
+          {expand: true, flatten: true, src: ['lib/client/app/**/*.html'], dest: 'build/views/', filter: 'isFile'},
         ]
       }
     },
