@@ -29,7 +29,8 @@ module.exports = function (grunt) {
     stylus: {
       compile: {
         options: {
-          'include css': true
+          'include css': true,
+          'compress': false
         },
         files: {
           'build/css/style.css': 'lib/css/style.styl'
