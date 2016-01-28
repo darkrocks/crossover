@@ -17,7 +17,8 @@
   },
   "homepage": "https://github.com/darkrocks/crossover#readme",
   "dependencies": {
-    "angular": "^1.4.9"
+    "angular": "^1.4.9",
+    "normalize-css": "^2.3.1"
   },
   "devDependencies": {
     "autoprefixer": "^6.3.1",
