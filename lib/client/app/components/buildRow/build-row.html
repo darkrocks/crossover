@@ -93,6 +93,25 @@
         <div class="build-details-header">
           Functional Test
         </div>
+        <div class="details-box-waiting"  ng-show="model.functionalTestsProgress!==100">
+          {{model.functionalTestsProgress}}%
+        </div>
+        <div class="row test-chart-container" ng-show="model.functionalTestsProgress===100">
+          <div class="sixty-perc column">
+            <pie-chart data="functionalTestChartData" width="120"></pie-chart>
+          </div>
+          <div class="forty-perc column">
+            <div class="test-passed-percentage">
+              {{functionalTestPercentage}}%
+            </div>
+            <div class="test-passed-text">
+              tests passed
+            </div>
+          </div>
+        </div>
+        <div class="coverage-indicator-container" ng-show="model.functionalTestsProgress===100">
+          <coverage-indicator percentage="model.functionalTestsCoverage"></coverage-indicator>
+        </div>
       </div>
     </div>
     <div class="details-message-col column">
