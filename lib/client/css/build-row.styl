@@ -24,13 +24,46 @@
     width: 197px;
     height: 179px;
     box-shadow: 6px 6px 7px -2px rgba(0,0,0,0.54);
-    padding-left: 5px;
-    padding-top: 5px;
+    padding: 5px;
     box-sizing: border-box;
+    .arrow-box
+      height: 68px;
+      position: relative;
+      .icon
+        position: absolute;
+        font-size: 67px;
+        line-height: 67px;
+        margin-left: 5px;
+        padding-top: 0;
+      .icon.horizontal
+        color: #fed86e
+
+      .arrow-number
+        position: relative;
+        color: #FFFFFF;
+        text-align: center;
+        margin-top: 14px;
+        font-size: 1.3em;
+        height: 32px;
+      .arrow-number.horizontal
+        color: black
+      .arrow-text
+        text-align: center;
+        margin-top: 3px;
+        color: black
+      .arrow-text.maintainability
+        margin-left -5px
+      .icon-up
+        color: cross-green
+      .icon-down
+        color: cross-red
   .build-details-header
     font-size: 1.2em;
     font-weight: 600;
-
+  .details-box-waiting
+    font-size: 2em;
+    margin-top: 30px;
+    text-align: center;
 
 .expand-animation {
   transition:0.1s ease-in height;

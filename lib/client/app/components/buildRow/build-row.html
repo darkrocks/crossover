@@ -26,6 +26,33 @@
         <div class="build-details-header">
           Metrics
         </div>
+        <div class="details-box-waiting" ng-show="!model.metrix">
+          {{model.metrixProgress}}%
+        </div>
+        <div class="row" ng-show="model.metrix">
+          <div class="one-half column arrow-box">
+            <div ng-class="testArrowIcon" class="icon"></div>
+            <div class="arrow-number">{{model.metrix.metrixTestScore}}</div>
+            <div class="arrow-text">Test</div>
+          </div>
+          <div class="one-half column arrow-box">
+            <div ng-class="maintainabilityArrowIcon" class="icon"></div>
+            <div class="arrow-number">{{model.metrix.metrixMaintainabilityScore}}</div>
+            <div class="arrow-text maintainability">Maintainability</div>
+          </div>
+        </div>
+        <div class="row" ng-show="model.metrix">
+          <div class="one-half column arrow-box">
+            <div class="icon-right icon horizontal"></div>
+            <div class="arrow-number horizontal">{{model.metrix.metrixSecurityScore}}</div>
+            <div class="arrow-text">Security</div>
+          </div>
+          <div class="one-half column arrow-box">
+            <div class="icon-right icon horizontal"></div>
+            <div class="arrow-number horizontal">{{model.metrix.metrixWorkmanshipScore}}</div>
+            <div class="arrow-text">Workmanship</div>
+          </div>
+        </div>
       </div>
     </div>
     <div class="details-box-col column">
