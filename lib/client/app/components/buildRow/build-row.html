@@ -7,16 +7,16 @@
     <div class="time-started column text-cell">{{model.timeStartedFormated}}</div>
     <div class="state column text-cell">{{status}}</div>
     <div class="metrix column">
-      <progress-bar progress="model.metrixProgress" success="metrixPassed"></progress-bar>
+      <progress-bar progress="model.metrixProgress" success="metrixPassed" ng-hide="active"></progress-bar>
     </div>
     <div class="build column">
-      <progress-bar progress="model.buildProgress" success="buildPassed"></progress-bar>
+      <progress-bar progress="model.buildProgress" success="buildPassed" ng-hide="active"></progress-bar>
     </div>
     <div class="unit-test column">
-      <progress-bar progress="model.unitTestProgress" success="unitTestsPassed"></progress-bar>
+      <progress-bar progress="model.unitTestProgress" success="unitTestsPassed" ng-hide="active"></progress-bar>
     </div>
     <div class="functional-test column">
-      <progress-bar progress="model.functionalTestsProgress" success="functionalTestsPassed"></progress-bar>
+      <progress-bar progress="model.functionalTestsProgress" success="functionalTestsPassed" ng-hide="active"></progress-bar>
     </div>
   </div>
 
@@ -132,8 +132,29 @@
     </div>
     <div class="details-message-col column">
       <div class="build-message-box">
-        <div class="build-details-header">
-          Metrics
+        <div class="build-message-header result">
+          Result:
+        </div>
+        <div class="status-line-1">
+          {{statusLine1}}
+        </div>
+        <div class="status-line-2">
+          {{statusLine2}}
+        </div>
+        <div class="find-issues status-button" ng-show="status==='Failed'||status==='Rejected'">
+          <button>Find Issues</button>
+        </div>
+        <div class="check-merged-build status-button" ng-show="status==='Accepted'">
+          <button>Merged Build</button>
+        </div>
+        <div class="deploy status-button" ng-show="status==='Complete'">
+          <button>Deploy</button> <span>to</span>
+        </div>
+        <div class="deploy status-button" ng-show="status==='Complete'">
+          <select>
+            <option value="Production">Production</option>
+            <option value="Staging">Staging</option>
+          </select>
         </div>
       </div>
     </div>
