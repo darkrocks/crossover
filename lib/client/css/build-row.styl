@@ -5,6 +5,7 @@
   height: 49px;
   box-sizing: border-box;
   cursor pointer
+  overflow: hidden;
   .icon
     font-size: 32px;
     line-height: 32px;
@@ -12,13 +13,28 @@
     padding-left: 7px;
   .text-cell
     padding-top: 10px;
+  .build-details
+    margin: 10px;
+  .build-details-box
+    border-style: solid;
+    border-width: 3px;
+    margin-left: 7px;
+    margin-right: 7px;
+    margin-top: 5px;
+    width: 197px;
+    height: 179px;
+    box-shadow: 6px 6px 7px -2px rgba(0,0,0,0.54);
+    padding-left: 5px;
+    padding-top: 5px;
+    box-sizing: border-box;
+
 
 .expand-animation {
   transition:0.1s ease-in height;
   height: 49px;
 }
 .expand-animation.expanded {
-  height: 100px;
+  height: 269px;
 }
 
 .build-row.pending
