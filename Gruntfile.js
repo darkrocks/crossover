@@ -23,6 +23,7 @@ module.exports = function (grunt) {
         files: [
           {src: ['lib/client/index.html'], dest: 'build/index.html'},
           {expand: true, flatten: true, src: ['lib/client/app/**/*.html'], dest: 'build/templates/', filter: 'isFile'},
+          {expand: true, flatten: true, src: ['lib/client/fonts/*.*'], dest: 'build/fonts/', filter: 'isFile'},
         ]
       }
     },
@@ -33,7 +34,7 @@ module.exports = function (grunt) {
           'compress': false
         },
         files: {
-          'build/css/style.css': 'lib/css/style.styl'
+          'build/css/style.css': 'lib/client/css/style.styl'
         }
       }
     },
