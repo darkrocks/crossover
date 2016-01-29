@@ -60,6 +60,22 @@
         <div class="build-details-header">
           Build
         </div>
+        <div class="details-box-waiting"  ng-show="model.buildProgress!==100">
+          {{model.buildProgress}}%
+        </div>
+        <div class="row build-icons-container" ng-show="model.buildProgress===100">
+          <div class="one-half column" ng-class="debugBuildClass">
+            <div class="icon-build"></div>
+            <div class="build-text">Debug</div>
+          </div>
+          <div class="one-half column" ng-class="releaseBuildClass">
+            <div class="icon-build"></div>
+            <div class="build-text">Release</div>
+          </div>
+        </div>
+        <div class="build-time" ng-show="model.buildProgress===100">
+          {{model.timeStartedFormated}}
+        </div>
       </div>
     </div>
     <div class="details-box-col column">
