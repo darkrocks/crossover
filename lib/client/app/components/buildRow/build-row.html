@@ -7,22 +7,22 @@
     <div class="time-started column text-cell">{{model.timeStartedFormated}}</div>
     <div class="state column text-cell">{{model.status}}</div>
     <div class="metrix column">
-      <progress-bar progress="model.metrixProgress" success="model.metrixTestPassed && model.metrixMaintainabilityPassed"></progress-bar>
+      <progress-bar progress="model.metrixProgress" success="metrixPassed"></progress-bar>
     </div>
     <div class="build column">
-      <progress-bar progress="model.buildProgress" success="model.debugBuild && model.releaseBuild"></progress-bar>
+      <progress-bar progress="model.buildProgress" success="buildPassed"></progress-bar>
     </div>
     <div class="unit-test column">
-      <progress-bar progress="model.unitTestProgress" success="model.unitTestsPassed"></progress-bar>
+      <progress-bar progress="model.unitTestProgress" success="unitTestsPassed"></progress-bar>
     </div>
     <div class="functional-test column">
-      <progress-bar progress="model.functionalTestsProgress" success="model.functionalTestsPassed"></progress-bar>
+      <progress-bar progress="model.functionalTestsProgress" success="functionalTestsPassed"></progress-bar>
     </div>
   </div>
 
   <div class="row build-details">
     <div class="details-box-col column">
-      <div class="build-details-box">
+      <div class="build-details-box" ng-class="metrixBoxClass">
         <div class="build-details-header">
           Metrics
         </div>
@@ -56,14 +56,14 @@
       </div>
     </div>
     <div class="details-box-col column">
-      <div class="build-details-box">
+      <div class="build-details-box" ng-class="buildBoxClass">
         <div class="build-details-header">
           Build
         </div>
       </div>
     </div>
     <div class="details-box-col column">
-      <div class="build-details-box" ng-class="unitTestsClass">
+      <div class="build-details-box" ng-class="unitTestBoxClass">
         <div class="build-details-header">
           Unit Test
         </div>
@@ -89,7 +89,7 @@
       </div>
     </div>
     <div class="details-box-col column">
-      <div class="build-details-box">
+      <div class="build-details-box" ng-class="functionalTestBoxClass">
         <div class="build-details-header">
           Functional Test
         </div>
