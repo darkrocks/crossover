@@ -1,13 +1,19 @@
-<div class="row build-row">
+<div ng-class="buildRowClass">
   <div class="icon column"><div ng-class="model.iconClass"></div></div>
   <div class="name column text-cell" >{{model.name}}</div>
   <div class="owner column text-cell">{{model.owner}}</div>
   <div class="time-started column text-cell">{{model.timeStartedFormated}}</div>
   <div class="state column text-cell">{{model.status}}</div>
   <div class="metrix column">
+    <progress-bar progress="model.metrixProgress" success="model.metrixTestPassed && model.metrixMaintainabilityPassed"></progress-bar>
+  </div>
+  <div class="build column">
     <progress-bar progress="model.buildProgress" success="model.debugBuild && model.releaseBuild"></progress-bar>
   </div>
-  <div class="build column"></div>
-  <div class="unit-test column"></div>
-  <div class="functional-test column"></div>
+  <div class="unit-test column">
+    <progress-bar progress="model.unitTestProgress" success="model.unitTestsPassed"></progress-bar>
+  </div>
+  <div class="functional-test column">
+    <progress-bar progress="model.functionalTestsProgress" success="model.functionalTestsPassed"></progress-bar>
+  </div>
 </div>
