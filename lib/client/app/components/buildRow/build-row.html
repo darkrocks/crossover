@@ -67,6 +67,22 @@
         <div class="build-details-header">
           Unit Test
         </div>
+        <div class="details-box-waiting"  ng-show="model.unitTestProgress!==100">
+          {{model.unitTestProgress}}%
+        </div>
+        <div class="row" ng-show="model.unitTestProgress===100">
+          <div class="sixty-perc column">
+            <pie-chart data="unitTestChartData" width="120"></pie-chart>
+          </div>
+          <div class="forty-perc column">
+            <div class="test-passed-percentage">
+              {{unitTestPercentage}}%
+            </div>
+            <div class="test-passed-text">
+              tests passed
+            </div>
+          </div>
+        </div>
       </div>
     </div>
     <div class="details-box-col column">
