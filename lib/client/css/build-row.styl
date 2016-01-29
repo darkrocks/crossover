@@ -2,7 +2,8 @@
   border-style: solid;
   border-width: 2px;
   margin-bottom: 15px;
-  height: 45px;
+  height: 49px;
+  box-sizing: border-box;
   cursor pointer
   .icon
     font-size: 32px;
@@ -11,6 +12,14 @@
     padding-left: 7px;
   .text-cell
     padding-top: 10px;
+
+.expand-animation {
+  transition:0.1s ease-in height;
+  height: 49px;
+}
+.expand-animation.expanded {
+  height: 100px;
+}
 
 .build-row.pending
   color cross-super-grey

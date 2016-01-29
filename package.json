@@ -18,6 +18,7 @@
   "homepage": "https://github.com/darkrocks/crossover#readme",
   "dependencies": {
     "angular": "^1.4.9",
+    "angular-animate": "^1.4.9",
     "angular-mocks": "^1.4.9",
     "express": "^4.13.4",
     "moment": "^2.11.1",
