@@ -2,6 +2,7 @@
 @import "./grid-system"
 @import "./typography"
 @import "./icons"
+@import "./dashboard"
 
 html {
   font-size: 62.5%; }
@@ -9,5 +10,12 @@ body {
   font-size: 1.5em; /* currently ems cause chrome bug misinterpreting rems on body element */
   line-height: 1.6;
   font-weight: 400;
-  font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: #222; }
+  font-family: Arial, "HelveticaNeue", "Helvetica Neue", Helvetica, sans-serif;
+  color: #222;
+
+  background: #f5f8fb; /* Old browsers */
+  background: -moz-linear-gradient(-45deg, #f5f8fb 0%, #ffffff 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(-45deg, #f5f8fb 0%,#ffffff 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(135deg, #f5f8fb 0%,#ffffff 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+}
+
