@@ -63,14 +63,14 @@
       </div>
     </div>
     <div class="details-box-col column">
-      <div class="build-details-box">
+      <div class="build-details-box" ng-class="unitTestsClass">
         <div class="build-details-header">
           Unit Test
         </div>
         <div class="details-box-waiting"  ng-show="model.unitTestProgress!==100">
           {{model.unitTestProgress}}%
         </div>
-        <div class="row" ng-show="model.unitTestProgress===100">
+        <div class="row test-chart-container" ng-show="model.unitTestProgress===100">
           <div class="sixty-perc column">
             <pie-chart data="unitTestChartData" width="120"></pie-chart>
           </div>
@@ -82,6 +82,9 @@
               tests passed
             </div>
           </div>
+        </div>
+        <div class="coverage-indicator-container" ng-show="model.unitTestProgress===100">
+          <coverage-indicator percentage="model.unitTestsCoverage"></coverage-indicator>
         </div>
       </div>
     </div>
