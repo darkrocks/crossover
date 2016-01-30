@@ -1,21 +1,12 @@
 {
   "name": "crossover",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "main": "lib/server/app.js",
   "scripts": {
     "start": "node lib/server/app.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/darkrocks/crossover.git"
-  },
-  "author": "",
+  "author": "Dmitriy Kazinov",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/darkrocks/crossover/issues"
-  },
-  "homepage": "https://github.com/darkrocks/crossover#readme",
   "dependencies": {
     "angular": "1.2.29",
     "angular-animate": "1.2.29",
