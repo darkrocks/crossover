@@ -26,9 +26,6 @@
         <div class="build-details-header">
           Metrics
         </div>
-        <div class="details-box-waiting" ng-show="!model.metrix">
-          {{model.metrixProgress}}%
-        </div>
         <div class="row" ng-show="model.metrix">
           <div class="one-half column arrow-box">
             <div ng-class="testArrowIcon" class="icon"></div>
@@ -53,15 +50,15 @@
             <div class="arrow-text">Workmanship</div>
           </div>
         </div>
+        <div class="details-box-waiting" ng-show="!model.metrix">
+          {{model.metrixProgress}}%
+        </div>
       </div>
     </div>
     <div class="details-box-col column">
       <div class="build-details-box" ng-class="buildBoxClass">
         <div class="build-details-header">
           Build
-        </div>
-        <div class="details-box-waiting"  ng-show="model.buildProgress!==100">
-          {{model.buildProgress}}%
         </div>
         <div class="row build-icons-container" ng-show="model.buildProgress===100">
           <div class="one-half column" ng-class="debugBuildClass">
@@ -76,15 +73,15 @@
         <div class="build-time" ng-show="model.buildProgress===100">
           {{model.timeStartedFormated}}
         </div>
+        <div class="details-box-waiting"  ng-show="model.buildProgress!==100">
+          {{model.buildProgress}}%
+        </div>
       </div>
     </div>
     <div class="details-box-col column">
       <div class="build-details-box" ng-class="unitTestBoxClass">
         <div class="build-details-header">
           Unit Test
-        </div>
-        <div class="details-box-waiting"  ng-show="model.unitTestProgress!==100">
-          {{model.unitTestProgress}}%
         </div>
         <div class="row test-chart-container" ng-show="model.unitTestProgress===100">
           <div class="sixty-perc column">
@@ -102,15 +99,15 @@
         <div class="coverage-indicator-container" ng-show="model.unitTestProgress===100">
           <coverage-indicator percentage="model.unitTestsCoverage"></coverage-indicator>
         </div>
+        <div class="details-box-waiting"  ng-show="model.unitTestProgress!==100">
+          {{model.unitTestProgress}}%
+        </div>
       </div>
     </div>
     <div class="details-box-col column">
       <div class="build-details-box" ng-class="functionalTestBoxClass">
         <div class="build-details-header">
           Functional Test
-        </div>
-        <div class="details-box-waiting"  ng-show="model.functionalTestsProgress!==100">
-          {{model.functionalTestsProgress}}%
         </div>
         <div class="row test-chart-container" ng-show="model.functionalTestsProgress===100">
           <div class="sixty-perc column">
@@ -127,6 +124,9 @@
         </div>
         <div class="coverage-indicator-container" ng-show="model.functionalTestsProgress===100">
           <coverage-indicator percentage="model.functionalTestsCoverage"></coverage-indicator>
+        </div>
+        <div class="details-box-waiting"  ng-show="model.functionalTestsProgress!==100">
+          {{model.functionalTestsProgress}}%
         </div>
       </div>
     </div>
