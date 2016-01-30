@@ -6,10 +6,17 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <!--[if lt IE 8]>
-  <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-  <![endif]-->
   <div data-ng-controller="LandingController" data-ng-include="'templates/landingView.html'"></div>
+  <!--[if lt IE 8]>
+  var head = document.getElementsByTagName('head')[0],
+  style = document.createElement('style');
+  style.type = 'text/css';
+  style.styleSheet.cssText = ':before,:after{content:none !important'};
+  head.appendChild(style);
+  setTimeout(function(){
+  head.removeChild(style);
+  }, 0);
+  <![endif]-->
   <script src="js/polyfil.js"></script>
   <script src="js/bundle.js"></script>
 </body>

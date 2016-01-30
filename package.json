@@ -21,7 +21,6 @@
     "angular-animate": "1.2.29",
     "angular-mocks": "1.2.29",
     "chart.js": "^1.0.2",
-    "d3": "^3.5.14",
     "express": "^4.13.4",
     "moment": "^2.11.1",
     "normalize-css": "^2.3.1"
