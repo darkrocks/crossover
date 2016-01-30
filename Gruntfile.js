@@ -8,6 +8,7 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-postcss');
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-autopolyfiller');
 
   // config
   grunt.initConfig({
@@ -17,6 +18,18 @@ module.exports = function (grunt) {
           'build/js/bundle.js': ['lib/client/app/app.js']
         }
       }
+    },
+    autopolyfiller: {
+
+      js: {
+        options: {
+          browsers: ['last 2 version', 'ie 8', 'ie 9']
+        },
+        files: {
+          'build/js/polyfil.js': ['build/js/bundle.js']
+        }
+      }
+
     },
     copy: {
       main: {
@@ -65,7 +78,7 @@ module.exports = function (grunt) {
       }
     },
     jshint: {
-      all: ['Gruntfile.js', 'lib/**/*.js', 'test/**/*.js']
+      all: ['Gruntfile.js', 'lib/**/*.js', 'test/**/*.js', '!lib/client/scripts/*.js']
     },
     watch: {
       all: {
@@ -78,5 +91,5 @@ module.exports = function (grunt) {
     }
   });
 
-  grunt.registerTask('build', ['jshint', 'browserify', 'stylus:compile', 'postcss', 'copy:main']);
+  grunt.registerTask('build', ['jshint', 'browserify', 'autopolyfiller:js', 'stylus:compile', 'postcss', 'copy:main']);
 };
